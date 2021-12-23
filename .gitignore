@@ -10,12 +10,14 @@
 
 # next.js
 /.next/
+.next
 /out/
 
 # production
 /build
 
 # misc
+package-lock.json
 .DS_Store
 *.pem
 
