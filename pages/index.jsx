@@ -1,7 +1,14 @@
+import Card from "../components/Card";
+
 const index = () => {
 	return (
-		<div>
-			<h1 className='text-center'>Nextjs + Tailwind CSS</h1>
+		<div className='container mx-auto'>
+			<div className='text-center'>UserList UI</div>
+			<div className='grid grid-cols-3 '>
+				<Card />
+				<Card />
+				<Card />
+			</div>
 		</div>
 	);
 };
