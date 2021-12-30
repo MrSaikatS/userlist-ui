@@ -2,9 +2,9 @@ import Image from "next/image";
 
 const Card = () => {
 	return (
-		<div className='w-96 h-auto text-white text-base rounded-3xl shadow-xl shadow-purple-500/50 py-6 bg-gradient-to-b from-pink-500 to-purple-500'>
+		<div className='w-96 h-auto text-white text-base rounded-3xl shadow-xl shadow-violet-900/50 py-6 bg-gradient-to-b from-pink-600 to-violet-900 hover:drop-shadow-2xl hover:shadow-violet-900/50'>
 			<div className='flex justify-center mb-5'>
-				<div className='w-32 h-32 self-center rounded-full border-4 border-violet-500'>
+				<div className='w-32 h-32 self-center rounded-full border-4 border-black'>
 					<Image
 						className='rounded-full'
 						src='https://randomuser.me/api/portraits/women/10.jpg'
