@@ -1,13 +1,13 @@
 import Image from "next/image";
 
-const Card = () => {
+const Card = ({ user }) => {
 	return (
 		<div className='w-96 h-auto text-white text-base rounded-3xl shadow-xl shadow-violet-900/50 py-6 bg-gradient-to-b from-pink-600 to-violet-900 hover:drop-shadow-2xl hover:shadow-violet-900/50'>
 			<div className='flex justify-center mb-5'>
 				<div className='w-32 h-32 self-center rounded-full border-4 border-black'>
 					<Image
 						className='rounded-full'
-						src='https://randomuser.me/api/portraits/women/10.jpg'
+						src={user.picture.large}
 						alt='img'
 						width={128}
 						height={128}
@@ -31,7 +31,9 @@ const Card = () => {
 							/>
 						</svg>
 					</div>
-					<div className='col-span-3 ml-4'>Mrs Hayley Davies</div>
+					<div className='col-span-3 ml-4'>
+						{user.name.title} {user.name.first} {user.name.last}
+					</div>
 				</div>
 				<div className='grid grid-cols-4 items-center'>
 					<div className='justify-self-end'>
@@ -55,7 +57,7 @@ const Card = () => {
 							/>
 						</svg>
 					</div>
-					<div className='col-span-3 ml-4'>27</div>
+					<div className='col-span-3 ml-4'>{user.dob.age}</div>
 				</div>
 				<div className='grid grid-cols-4 items-center'>
 					<div className='justify-self-end'>
@@ -73,7 +75,7 @@ const Card = () => {
 							/>
 						</svg>
 					</div>
-					<div className='col-span-3 ml-4'>Female</div>
+					<div className='col-span-3 ml-4 capitalize'>{user.gender}</div>
 				</div>
 
 				<div className='grid grid-cols-4 items-center'>
@@ -92,7 +94,7 @@ const Card = () => {
 							/>
 						</svg>
 					</div>
-					<div className='col-span-3 ml-4'>hayley.davies@example.com</div>
+					<div className='col-span-3 ml-4'>{user.email}</div>
 				</div>
 
 				<div className='grid grid-cols-4 items-center'>
@@ -117,7 +119,7 @@ const Card = () => {
 							/>
 						</svg>
 					</div>
-					<div className='col-span-3 ml-4'>United Kingdom</div>
+					<div className='col-span-3 ml-4'>{user.location.country}</div>
 				</div>
 			</div>
 		</div>
